@@ -96,11 +96,12 @@ h1, h2 {
 }
 .light {
     background-color: #ffffff;
+    font-color: black;
     min-height: 100vh;
 }
 
 .dark {
     background-color: #333333;
-    color: #ffffff; 
+    font-color: #ffffff; 
     min-height: 100vh;
 }
