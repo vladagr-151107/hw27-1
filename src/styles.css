@@ -20,10 +20,6 @@ nav{
 body {
     line-height: 1.2;
     font-size: 18px;
-    background-color: #37cfc8;
-    body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 }
 
 h1, h2 {
@@ -38,7 +34,6 @@ h1, h2 {
 }
 
 .form {
-    background: #fff;
     padding: 10px;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -98,4 +93,14 @@ h1, h2 {
     padding: 0.5rem;
     display: inline-block;
     position: relative;
+}
+.light {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.dark {
+    background-color: #333333;
+    color: #ffffff; 
+    min-height: 100vh;
 }
