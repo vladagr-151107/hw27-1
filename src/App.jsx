@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ErrorBoundary from './ErrorBoundary';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,16 +13,17 @@ function App(){
     const toggleTheme = () => {
         setDark(prev => !prev);
     };
-
     return (
+        <ErrorBoundary>
         <div className={isDark ? 'dark' : 'light'}>
             <Header toggleTheme={toggleTheme} />
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/about" element={<About/>}/>
-                <Route path="/contacts" element={<Contacts/>}/>
+                <Route path="/" element={<ErrorBoundary><Home/></ErrorBoundary>}/>
+                <Route path="/about" element={<ErrorBoundary><About/></ErrorBoundary>}/>
+                <Route path="/contacts" element={<ErrorBoundary><Contacts/></ErrorBoundary>}/>
             </Routes>
         </div>
+        </ErrorBoundary>
     );
 }
 
